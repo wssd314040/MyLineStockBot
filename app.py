@@ -188,5 +188,8 @@ def handle_text_message(event):
 
 
 if __name__ == "__main__":
-    # 本地開發：監聽 0.0.0.0:5001
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    import os
+    # 讀取 Render 給的 PORT，如果沒有就用 5001
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port, debug=True)
+
