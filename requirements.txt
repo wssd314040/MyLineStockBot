@@ -1,0 +1,5 @@
+cat << EOF > requirements.txt
+flask
+line-bot-sdk
+requests
+EOF
